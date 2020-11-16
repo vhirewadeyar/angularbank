@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <TITLE>MS INTERNATIONAL BANK PVT LTD</TITLE>
+        <!-- <link rel="stylesheet" href="styling_for_banking.css" type="text/css" > -->
+    </head>
+    <BODY id="form-body">
+            <h2 style="text-align: center;color: blue;">TRANSFER PAGE</h2>
+            <div style="text-align: center;">
+                <!-- <p class="input-label"> Full-name:</p>  -->
+                    <div class="form-group" class="col-md-4">
+                        <label class="">Full-name:</label>
+                        <select id="a" class="form-control"
+                          (change)="verifiertypeEdit($event)">
+                          <option *ngFor="let n of name" [value]="name">{{n}}</option>
+                        </select>
+                     </div>
+                    <!--         <input class="input-item" type="text" name="Full-name" placeholder="Full-name" required maxlength="10">   <br>
+-->
+                </div>
+                <div style="text-align: center;">
+                    <form [formGroup]="accountDet">
+                        <div >
+                            <p class="input-label">Account-number:</p> 
+                            <input class="form-control" type="text" formControlName="accountNo" placeholder="Account-number" required maxlength="7">   <br>
+                            </div>
+
+                        <div>
+                            <p class="input-label"> Enter  amount to be transfered:</p> 
+                            <input class="form-control" type="text" formControlName="amount" placeholder="credit-amount" required >   <br>
+                        </div>
+                        
+                        <div>
+                            <button id="btn-submit"><a  (click)="sendAmount()">TRANSFER</a></button>
+                        </div> 
+                    </form>
+                </div>
+    </BODY>
+</html>

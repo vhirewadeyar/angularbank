@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bank-project"
+    }
+  },
+  "defaultProject": "bank-project",
+  "cli": {
+    "analytics": "71e46eb2-c012-49b4-9c89-b70e29a8f460"
+  }
 }

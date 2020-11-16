@@ -1,0 +1,43 @@
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MS INTERNATIONAL BANK PVT LTD</title>
+        <!-- <link rel="stylesheet" href="styling_for_banking.css"> -->
+    </head>
+    <body id="customer-body">
+        <header >
+            <img id="cust-image" src="assets/ms.jpg" alt="">  
+            <h1 id="custom-name">MS INTERNATIONAL BANK PVT LTD</h1>
+        
+        </header>
+
+        <main id="table-main">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Account_Number</th>
+                            <th>Customer_Name</th>
+                            <th>Debit</th>
+                            <th>Credit</th>
+                            <th>Balance</th>
+                            <th>Open Account</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let customer of custDetails" >
+                            <td>{{customer?.accountNumber}}</td>
+                            <td>{{customer?.name}}</td>
+                            <td>{{customer?.debit}}</td>
+                            <td>{{customer?.credit}}</td>
+                            <td>{{customer?.totalBalance}}</td>
+                            <td><button id="customer-btn"><a href="/customerAccount" (click)="sendAccNo(customer)">open_account</a></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>
